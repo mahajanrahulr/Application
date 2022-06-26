@@ -32,6 +32,7 @@
 
 	<properties>
 		<java.version>10</java.version>
+		<start-class>myapp.MyDemoSpringApp</start-class>
 	</properties>
 
 	<build>
@@ -41,10 +42,14 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.3.2</version>
+
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>myapp.MyDemoSpringApp</mainClass>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
